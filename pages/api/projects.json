@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "dummy project",
+    "image": "https://imgur.com/kdGs6zH.png",
+    "description": "A platform for web developers to showcase their projects",
+    "tags": ["next", "node", "mongodb", "tailwind", "react-query"],
+    "source_code": "https://github.com/",
+    "demo": "https://"
+  }
+]
