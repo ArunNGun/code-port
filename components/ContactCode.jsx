@@ -3,7 +3,7 @@ import styles from '../styles/ContactCode.module.css';
 const contactItems = [
   {
     social: 'website',
-    link: 'https://a-k-ivory.vercel.app/',
+    link: 'a-k-ivory.vercel.app',
     href: 'https://a-k-ivory.vercel.app/',
   },
   {
