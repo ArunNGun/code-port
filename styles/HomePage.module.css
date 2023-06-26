@@ -102,6 +102,19 @@
 }
 .actionContainer a{
   text-decoration: none;
+  position: relative;
+}
+.downloadAck{
+  position:absolute;
+ height: 400px;
+ z-index: 3;
+ animation: downloading 3s ease-in-out;
+}
+
+
+
+.downloadAckHidden{
+display: none;
 }
 
 .outlined {
@@ -266,5 +279,22 @@
     height: 50vh;
     z-index: 1;
     transition: ease-in-out 1s;
+  }
+  .downloadAck{
+    height: 250px;
+  }
+}
+
+/* keyframes */
+
+@keyframes downloading {
+  0%{
+    scale: 0;
+  }
+  50%{
+scale: 1;
+  }
+  100%{
+    scale:0;
   }
 }
