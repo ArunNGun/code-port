@@ -8,8 +8,18 @@ const ContactPage = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmitAnimation = () => {
+    setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 3000);
+  }
+
   const submitForm = async (e) => {
     e.preventDefault();
+    handleSubmitAnimation();
     console.log(process.env.NEXT_PUBLIC_API_URL);
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/contact`, {
       method: 'POST',
@@ -17,13 +27,13 @@ const ContactPage = () => {
     });
     // Temporary
     if (res.ok) {
-      alert('Your response has been received!');
+      // alert('Your response has been received!');
       setName('');
       setEmail('');
       setSubject('');
       setMessage('');
     } else {
-      alert('There was an error. Please try again in a while.');
+      // alert('There was an error. Please try again in a while.');
     }
   };
 
@@ -82,7 +92,12 @@ const ContactPage = () => {
               required
             ></textarea>
           </div>
-          <button type="submit">Submit</button>
+          <div className={styles.submitContainer}>
+            <img className={submitted ? styles.submitAck : styles.submitAckHidden} src="/fly-cat.png" alt="" />
+            <button type="submit">
+              Submit
+            </button>
+          </div>
         </form>
       </div>
     </div>

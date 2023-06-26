@@ -63,6 +63,23 @@
   margin-bottom: 1.5rem;
 }
 
+.submitAck{
+  display: flex;
+  position:absolute;
+   height: 0px;
+   left: 10px;
+   top: 10px;
+   z-index: 3;
+   animation: fly 3s ease-in-out;
+}
+.submitContainer{
+  position: relative;
+}
+.submitAckHidden{
+display: hidden;
+height:0px;
+}
+
 @media screen and (max-width: 1200px) {
   .container {
     display: block;
@@ -79,5 +96,27 @@
   }
   .form input {
     font-size: 0.85rem;
+  }
+}
+
+/* keyframes */
+@keyframes fly {
+  0%{
+ scale: 0;
+ height: 0px;
+ top:0px;
+ left: 0px;
+  }
+  50%{
+scale: 1;
+height: 250px;
+top:100px;
+left:20px;
+  }
+  100%{
+scale: 1;
+height: 300px;
+top:100px;
+left:600px;
   }
 }
