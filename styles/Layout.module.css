@@ -12,6 +12,7 @@
   flex: 1;
   height: 85vh;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .aboutContent {
   padding: 0;
