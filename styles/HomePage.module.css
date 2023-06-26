@@ -90,6 +90,17 @@
   border: none;
   cursor: pointer;
   z-index: 3;
+  display: flex;
+  gap: 4px;
+  border-radius: 5px;
+}
+.actionContainer{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.actionContainer a{
+  text-decoration: none;
 }
 
 .outlined {
@@ -99,6 +110,7 @@
   border: 2px solid var(--accent-color);
   background: transparent;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .button:hover,
@@ -112,7 +124,13 @@
   overflow: visible;
   z-index: 2;
 }
-
+.icon {
+  height: 48px;
+  width: 48px;
+  padding: 0.65rem 0;
+  display: block;
+  margin: 0 auto;
+}
 /* 4K Screens */
 @media screen and (min-width: 2000px) {
   .background {

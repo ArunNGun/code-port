@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Illustration from '../components/Illustration';
 import styles from '../styles/HomePage.module.css';
+import DownloadIcon from '../components/icons/DownloadIcon';
 
 export default function HomePage() {
   return (
@@ -14,12 +15,17 @@ export default function HomePage() {
           <div className={styles.content}>
             <h1 className={styles.name}>Arun Kumar</h1>
             <h6 className={styles.bio}>Software Engineer</h6>
-            <a href="/Arun_Kumar.pdf" download>
-              <button className={styles.button}>Resume</button>
-            </a>
-            <Link href="/contact">
-              <button className={styles.outlined}>Contact Me</button>
-            </Link>
+            <div className={styles.actionContainer}>
+              <a href="/Arun_Kumar.pdf" download>
+                <button className={styles.button}>
+                  Resume
+                  <DownloadIcon className={styles.icon} />
+                </button>
+              </a>
+              <Link href="/contact">
+                <button className={styles.outlined}>Contact Me</button>
+              </Link>
+            </div>
           </div>
           <Illustration className={styles.illustration} />
         </div>
