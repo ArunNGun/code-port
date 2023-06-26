@@ -91,6 +91,7 @@
   cursor: pointer;
   z-index: 3;
   display: flex;
+  align-items: center;
   gap: 4px;
   border-radius: 5px;
 }
