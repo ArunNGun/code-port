@@ -1,6 +1,7 @@
 import styles from '../styles/AboutPage.module.css';
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
+import Link from 'next/link';
 
 const AboutPage = () => {
   const linesRef = useRef(null);
@@ -11,7 +12,7 @@ const AboutPage = () => {
       height: 0,
       // stagger: 0.2,
       ease: "power2.out",
-    });
+    }).delay(0.5);
   }, []);
 
   return (
@@ -40,6 +41,22 @@ const AboutPage = () => {
             I'm a software engineer specialised in frontend and backend development for complex scalable web apps.
             If you have a great project that needs some amazing skills.<span className={styles.fullStop}>I'm your guy.</span>
           </div>
+        </div>
+        <div className={styles.section2}>
+          <div className={styles.background2}>
+          </div>
+          <div className={styles.background3}>
+            <h1>HIRE</h1>
+            <h1>ME</h1>
+          </div>
+          <div className={styles.summary2}>
+            I'm always <br /> interested about <br /> cool stuff. Are you <br /> minding a project?<br /><span className={styles.stroke}><Link href='/contact' >Let's talk.</Link></span> </div>
+        </div>
+        <div className={styles.section3}>
+          <a href='#' className="socialLinks">GITHUB</a>
+          <a href='#' className="socialLinks">LINKEDIN</a>
+          <a href='#' className="socialLinks">INSTA</a>
+          <a href='#' className="socialLinks">MAIL</a>
         </div>
       </div>
     </div>
