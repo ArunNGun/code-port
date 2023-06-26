@@ -12,7 +12,34 @@
   cursor: pointer;
   width: 100%;
 }
+.themeIconContainer{
+  cursor: pointer;
+  width: 100%;
+}
+.themeIconContainer svg{
+  fill: var(--accent-color);
+  animation-name: ckw;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    display: inline-block;
+}
 
+@keyframes ckw {
+  0% {
+      transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
+}
+
+.themeIconContainer:hover {
+  background: var(--sidebar-hover-bg);
+}
 .iconContainer:hover {
   background: var(--sidebar-hover-bg);
 }

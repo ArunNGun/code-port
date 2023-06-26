@@ -35,7 +35,7 @@ const AboutPage = () => {
       <div className={styles.aboutMain}>
         <div className={styles.section1}>
           <div className={styles.image1}>
-            <img src="/cat.png" alt="" />
+            <img className={styles.cat} src="/cat.png" alt="" />
           </div>
           <div className={styles.summary1}>
             I'm a software engineer specialised in frontend and backend development for complex scalable web apps.
@@ -53,10 +53,10 @@ const AboutPage = () => {
             I'm always <br /> interested about <br /> cool stuff. Are you <br /> minding a project?<br /><span className={styles.stroke}><Link href='/contact' >Let's talk.</Link></span> </div>
         </div>
         <div className={styles.section3}>
-          <a href='#' className="socialLinks">GITHUB</a>
-          <a href='#' className="socialLinks">LINKEDIN</a>
-          <a href='#' className="socialLinks">INSTA</a>
-          <a href='#' className="socialLinks">MAIL</a>
+          <a href='https://github.com/ArunNGun' className="socialLinks">GITHUB</a>
+          <a href='https://www.linkedin.com/in/akumar97/' className="socialLinks">LINKEDIN</a>
+          <a href='https://www.instagram.com/arun_irl/' className="socialLinks">INSTA</a>
+          <Link href='/contact' className="socialLinks">MAIL</Link>
         </div>
       </div>
     </div>

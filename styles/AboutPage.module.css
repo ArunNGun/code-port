@@ -15,6 +15,7 @@
     top:100px;
     opacity: 0.1;
     z-index: 1;
+    transition: ease-in-out 1s;
   }
 .aboutName{
     z-index: 2;
@@ -23,6 +24,8 @@
     font-family: 'Poppins', sans-serif;
     color: #fff;
     margin-top: -30px;
+    transition: ease-in-out 1s;
+
 }
 .fullStop{
     color: var(--accent-color);
@@ -33,6 +36,8 @@
     justify-content: space-between; 
     flex-direction: row-reverse;
     align-items: flex-end;
+    transition: ease-in-out 1s;
+
 }
 .smallDesc{
     z-index: 2;
@@ -139,4 +144,126 @@
 .stroke a {
     color: var(--accent-color);
     text-decoration: none;
+}
+.cat{
+    height: 520px;
+    transition: ease-in-out 1s;
+
+}
+/* media queries */
+
+@media screen and (max-width: 1100px) {
+    .cat{
+        height: 420px;
+    transition: ease-in-out 1s;
+
+    }
+}
+@media screen and (max-width: 800px) {
+    .legendContainer{
+        flex-direction: column;
+        align-items: center;
+    transition: ease-in-out 1s;
+        
+    }
+    .smallDesc{
+        transform: rotate(0deg);
+    transition: ease-in-out 1s;
+
+    }
+    .background {
+        font-size: 3.5rem;
+        line-height: 0.9;
+        transform: rotate(-90deg);
+        top: 250px;
+        right: -250px;
+    transition: ease-in-out 1s;
+
+      }
+      .section1 {
+        flex-direction: column;
+        margin-top: 100px;
+    transition: ease-in-out 1s;
+
+      }
+      .summary1{
+        padding: 0 16px;
+        margin-top: 5rem;
+    transition: ease-in-out 1s;
+
+      }
+      .summary2{
+        font-size: 3.5rem;
+    transition: ease-in-out 1s;
+
+      }
+      .lineContainer{
+        height: 115%;
+      }
+}
+@media screen and (max-width: 500px) {
+    .legendContainer{
+        flex-direction: column;
+        align-items: center;
+    transition: ease-in-out 1s;
+
+    }
+    .cat{
+        height: 320px;
+    transition: ease-in-out 1s;
+
+    }
+    .aboutName{
+        font-size: 5rem;
+        line-height: 0.89;
+        margin-top: -10px;
+    transition: ease-in-out 1s;
+
+    }
+    .smallDesc{
+        transform: rotate(0deg);
+        margin-top: 2rem;
+    transition: ease-in-out 1s;
+
+    }
+    .background {
+        font-size: 3.5rem;
+        line-height: 0.9;
+        transform: rotate(-90deg);
+        top: 150px;
+        right: -250px;
+    transition: ease-in-out 1s;
+
+      }
+    .background2 {
+        transform: rotate(-90deg);
+        right: -250px;
+    transition: ease-in-out 1s;
+
+      }
+      .section1 {
+        flex-direction: column;
+        margin-top: 100px;
+    transition: ease-in-out 1s;
+
+      }
+      .summary1{
+        padding: 0 16px;
+        margin-top: 5rem;
+    transition: ease-in-out 1s;
+
+      }
+      .summary2{
+        font-size: 2.5rem;
+    transition: ease-in-out 1s;
+
+      }
+      .lineContainer{
+        height: 120%;
+      }
+      .background3{
+        font-size: 2.5rem;
+    transition: ease-in-out 1s;
+
+      }
 }

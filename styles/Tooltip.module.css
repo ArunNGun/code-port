@@ -1,0 +1,78 @@
+.tooltipContainer{
+ position: relative;
+}
+.tooltipContainer:hover{
+ .tooltip{
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
+    transition:0.3s ease-in-out; 
+ }
+}
+.tooltip{
+    display: flex;
+    opacity: 0;
+    position: absolute;
+    width: fit-content;
+    right: -80px;
+    top: 13px;
+    font-size: 1rem;
+    color: #fff;
+    font-family: 'JetBrains Mono', monospace;
+    border:1px solid var(--accent-color) ;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    padding: 2px;
+    columns: var(--text-color);
+    transition:1s ease-in-out; 
+    animation: yoyo 2s linear infinite; 
+    z-index: 99;
+
+}
+.tooltipActive{
+    display: flex;
+    opacity: 1;
+    position: absolute;
+    width: fit-content;
+    right: -80px;
+    top: 13px;
+    font-size: 1rem;
+    color: #fff;
+    font-family: 'JetBrains Mono', monospace;
+    border:1px solid var(--accent-color) ;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    padding: 2px;
+    columns: var(--text-color);
+    transition:1s ease-in-out;
+    animation: yoyo 1s linear infinite; 
+    z-index: 99;
+}
+.tooltip::before, .tooltipActive::before{
+    content:'';
+    display:block;
+    width:0;
+    height:0;
+    position:absolute;
+
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right:10px solid var(--accent-color);
+    left:-8px;
+
+    top:3px;
+}
+
+/* keyframes */
+
+@keyframes yoyo {
+    0% {
+        right: -80px;
+    }
+    50% { 
+        right: -90px;
+     }
+    100% {
+        right: -80px;     
+    }
+  }

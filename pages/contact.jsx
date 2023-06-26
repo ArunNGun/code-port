@@ -15,6 +15,7 @@ const ContactPage = () => {
       method: 'POST',
       body: JSON.stringify({ name, email, subject, message }),
     });
+    // Temporary
     if (res.ok) {
       alert('Your response has been received!');
       setName('');
