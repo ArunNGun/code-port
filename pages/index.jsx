@@ -14,9 +14,9 @@ export default function HomePage() {
           <div className={styles.content}>
             <h1 className={styles.name}>Arun Kumar</h1>
             <h6 className={styles.bio}>Software Engineer</h6>
-            <Link href="/projects">
-              <button className={styles.button}>View Work</button>
-            </Link>
+            <a href="/Arun_Kumar.pdf" download>
+              <button className={styles.button}>Resume</button>
+            </a>
             <Link href="/contact">
               <button className={styles.outlined}>Contact Me</button>
             </Link>
