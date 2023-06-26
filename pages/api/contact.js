@@ -51,6 +51,6 @@ export default async (req, res) => {
     res.status(201).json({ msg: 'Success' });
   } catch (error) {
     console.log(error);
-    res.status(500).json({ msg: 'Failed' });
+    res.status(500).json({ msg: 'Failed', error });
   }
 };
