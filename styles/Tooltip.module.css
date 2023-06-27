@@ -1,5 +1,8 @@
 .tooltipContainer{
  position: relative;
+ justify-content: center;
+    align-items: center;
+    display: flex;
 }
 .tooltipContainer:hover{
  .tooltip{
