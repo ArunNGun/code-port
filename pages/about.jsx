@@ -2,6 +2,8 @@ import styles from '../styles/AboutPage.module.css';
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import Link from 'next/link';
+import CircleIcon from '../components/icons/CircleIcon';
+import ArrowIcon from '../components/icons/ArrowIcon';
 
 const AboutPage = () => {
   const linesRef = useRef(null);
@@ -35,6 +37,21 @@ const AboutPage = () => {
       <div className={styles.aboutMain}>
         <div className={styles.section1}>
           <div className={styles.image1}>
+            {/* // mess */}
+            <div className={styles.funnyTextContainer}>
+              <div className={styles.funnyTextInnerContainer}>
+                <div className={styles.arrowIcon}>
+                  <ArrowIcon />
+                </div>
+                <div className={styles.circleIcon}>
+                  <CircleIcon />
+                </div>
+                <p className={styles.funnyText}>
+                  I'm not this one
+                </p>
+              </div>
+            </div>
+            {/* ends here */}
             <img className={styles.cat} src="/cat.png" alt="" />
           </div>
           <div className={styles.summary1}>
@@ -50,7 +67,7 @@ const AboutPage = () => {
             <h1>ME</h1>
           </div>
           <div className={styles.summary2}>
-            I'm always <br /> interested about <br /> cool stuff. Are you <br /> minding a project?<br /><span className={styles.stroke}><Link href='/contact' >Let's talk.</Link></span> </div>
+            I'm always <br /> up for new <br /> challenges. Got a <br /> project in mind?<br /><span className={styles.stroke}><Link href='/contact' >Let's talk.</Link></span> </div>
         </div>
         <div className={styles.section3}>
           <a href='https://github.com/ArunNGun' className="socialLinks">GITHUB</a>
