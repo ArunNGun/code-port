@@ -74,6 +74,36 @@
 }
 .image1{
     z-index: 2;
+    position: relative;
+}
+.funnyTextContainer{
+    position: absolute;
+    right: 0;
+}
+.funnyTextInnerContainer{
+    position: relative;
+}
+.funnyText{
+    font-size: 1.1rem;
+}
+.arrowIcon{
+    position: absolute;
+    transform: rotateY(185deg) rotate(68deg);
+    right: -76px;
+    top: 21px;
+    scale: 0.8;
+}
+.arrowIcon path{
+    stroke: var(--accent-color);
+}
+.circleIcon{
+    position: absolute;
+    top: -20px;
+    right: -38px;
+    scale: 0.8;
+}
+.circleIcon path{
+    stroke: var(--accent-color);
 }
 .background2 {
     font-size: 5rem;
@@ -118,10 +148,11 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: 1px dotted var(--accent-color);
-    border-radius: 50px;
-    margin: 32px 0 0 0;
-    background-color: var(--explorer-bg);
+    /* border: 1px dotted var(--accent-color); */
+    /* border-radius: 50px; */
+    margin: 86px 0 0 0;
+    padding: 0 8px 4px 0;
+    /* background-color: var(--explorer-bg); */
     gap: 16px;
 }
 .section3 a{
@@ -148,8 +179,8 @@
 .cat{
     height: 520px;
     transition: ease-in-out 1s;
-
 }
+
 /* media queries */
 
 @media screen and (max-width: 1100px) {
