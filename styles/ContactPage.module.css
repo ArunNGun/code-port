@@ -70,7 +70,7 @@
    left: 10px;
    top: 10px;
    z-index: 3;
-   animation: fly 3s ease-in;
+   animation: fly 5s linear;
 }
 .submitContainer{
   position: relative;
@@ -110,19 +110,19 @@ height:0px;
   50%{
 scale: 1;
 height: 250px;
-top:100px;
+top:-200px;
 left:20px;
   }
   75%{
     scale: 1;
 height: 300px;
-top:100px;
+top:-500px;
 left:600px;
   }
   100%{
 scale: 1;
 height: 300px;
-top:100px;
+top:-500px;
 left:900px;
   }
 }

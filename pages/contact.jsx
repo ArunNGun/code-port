@@ -14,7 +14,7 @@ const ContactPage = () => {
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
-    }, 3000);
+    }, 5000);
   }
 
   const submitForm = async (e) => {
