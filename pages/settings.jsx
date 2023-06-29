@@ -7,6 +7,13 @@ const SettingsPage = () => {
       <h2>Manage Themes</h2>
       <div className={styles.container}>
         <ThemeInfo
+          name="default"
+          icon="/code.png"
+          publisher="default theme"
+          theme="theme"
+          description="VS Code default theme"
+        />
+        <ThemeInfo
           name="GitHub Dark"
           icon="/github-dark.png"
           publisher="GitHub"

@@ -7,17 +7,25 @@ const ProjectsPage = ({ projects }) => {
     <>
       <h3>Some of my Work</h3>
       <div className={styles.container}>
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
+        <div className={styles.projects}>
+          {projects?.map((project, index) => (
+            <ProjectCard key={project.id} project={project} index={index + 1} />
+          ))}
+        </div>
       </div>
     </>
   );
 };
 
 export async function getStaticProps() {
-  const projects = getProjects();
+  let projects = []
+  try {
+    projects = await getProjects();
+    console.log(projects)
 
+  } catch (error) {
+    console.log(`error while getting projects ${error}`)
+  }
   return {
     props: { title: 'Projects', projects },
   };

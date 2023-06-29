@@ -1,6 +1,27 @@
 .container {
   margin: 1.5rem 0;
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
+  gap: 1.5rem; */
+  /* overflow-x: auto; */
+  display: flex;
+  /* max-width: 100%; */
+  flex-wrap: wrap;
+  height: 70vh;
+  justify-content: center;
+  max-width: 1389px;
+  margin: 0 auto;
+}
+.projects{
+  max-width: 1089px;
+}
+@media screen and (max-width: 1385px) {
+  .container{
+    justify-content: center;
+  }
+  .projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

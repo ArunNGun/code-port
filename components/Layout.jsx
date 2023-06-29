@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
         <Explorer />
         <div style={{ width: '100%' }}>
           <Tabsbar />
-          <main className={router.pathname === '/about' ? styles.aboutContent : styles.content}>{children}</main>
+          <main className={router.pathname === '/about' || router.pathname === '/projects' ? styles.aboutContent : styles.content}>{children}</main>
         </div>
       </div>
       <Bottombar />

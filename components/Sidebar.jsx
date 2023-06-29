@@ -60,7 +60,7 @@ const Sidebar = () => {
       </div>
       <div className={styles.sidebarBottom}>
         {sidebarBottomItems.map(({ Icon, desc, path }) => (
-          <div className={desc === 'Themes' ? styles.themeIconContainer : styles.iconContainer}>
+          <div key={path} className={desc === 'Themes' ? styles.themeIconContainer : styles.iconContainer}>
 
             {desc === 'Themes' ?
               <Tooltip message="Themes" showTooltip>

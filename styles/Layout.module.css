@@ -20,10 +20,28 @@
   font-family: 'JetBrains Mono', monospace;
   flex: 1;
   height: 90vh;
-  overflow-x: hidden;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
+.aboutContent {
+  scrollbar-width: 3px;
+  scrollbar-color: var(--accent-color);
+}
+
+.aboutContent::-webkit-scrollbar {
+  width: 3px;
+}
+
+.aboutContent::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-bg);
+  border-left: 1px solid #1e1f29;
+}
+
+.aboutContent::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-left: 1px solid #1e1f29;
+}
 .content {
   scrollbar-width: 10px;
   scrollbar-color: var(--accent-color);
