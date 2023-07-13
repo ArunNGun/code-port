@@ -2,19 +2,25 @@ import Link from 'next/link';
 import Illustration from '../components/Illustration';
 import styles from '../styles/HomePage.module.css';
 import DownloadIcon from '../components/icons/DownloadIcon';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function HomePage() {
 
   const [downloading, setDownloading] = useState(false)
 
+  const downloadCount = async () => {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/download`, {
+      method: 'GET'
+    });
+  }
+
   const handleDownloadAnimation = () => {
     setDownloading(true);
+    downloadCount();
     setTimeout(() => {
       setDownloading(false);
     }, 3000);
   }
-
   return (
     <>
       <div className={styles.container}>

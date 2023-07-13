@@ -21,7 +21,6 @@ export async function getStaticProps() {
   let projects = []
   try {
     projects = await getProjects();
-    console.log(projects)
 
   } catch (error) {
     console.log(`error while getting projects ${error}`)

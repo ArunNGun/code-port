@@ -5,10 +5,18 @@ import Bottombar from '../components/Bottombar';
 import Tabsbar from './Tabsbar';
 import styles from '../styles/Layout.module.css';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 const Layout = ({ children }) => {
   const router = useRouter();
-
+  useEffect(() => {
+    const init = async () => {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/init`, {
+        method: 'GET'
+      });
+    }
+    init();
+  }, []);
   return (
     <>
       <Titlebar />

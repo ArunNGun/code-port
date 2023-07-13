@@ -20,7 +20,6 @@ const ContactPage = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     handleSubmitAnimation();
-    console.log(process.env.NEXT_PUBLIC_API_URL);
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/contact`, {
       method: 'POST',
       body: JSON.stringify({ name, email, subject, message }),
