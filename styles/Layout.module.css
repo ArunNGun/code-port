@@ -21,6 +21,7 @@
   flex: 1;
   height: 90vh;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
 }
 
@@ -64,10 +65,12 @@
 @media screen and (max-width: 600px) {
   .content {
     padding: 2rem 1rem;
+    -webkit-overflow-scrolling: touch;
   }
 }
 @media screen and (max-width: 400px) {
   .aboutContent {
     height: 85vh;
+    -webkit-overflow-scrolling: touch;
   }
 }
