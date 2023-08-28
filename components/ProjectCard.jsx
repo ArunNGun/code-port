@@ -37,7 +37,7 @@ const ProjectCard = ({ project, index = '-' }) => {
         <div class={styles.data}>
           <div class={styles.content}>
             <span class={styles.type}>{`Project-${index}`}</span>
-            <h1 class={styles.title}><a href="#">{project.name}</a></h1>
+            <h1 class={styles.title}><a href={project.live_link}>{project.name}</a></h1>
             <p class={styles.text}>{project.description}</p>
           </div>
         </div>

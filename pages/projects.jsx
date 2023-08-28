@@ -17,7 +17,7 @@ const ProjectsPage = ({ projects }) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   let projects = []
   try {
     projects = await getProjects();
@@ -27,6 +27,7 @@ export async function getStaticProps() {
   }
   return {
     props: { title: 'Projects', projects },
+    // revalidate: 60 // will be fetched in every 60 secs
   };
 }
 
