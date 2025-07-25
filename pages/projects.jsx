@@ -17,7 +17,7 @@ const ProjectsPage = ({ projects }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   let projects = []
   try {
     projects = await getProjects();
@@ -27,7 +27,7 @@ export async function getServerSideProps() {
   }
   return {
     props: { title: 'Projects', projects },
-    // revalidate: 60 // will be fetched in every 60 secs
+    revalidate: 2592000 // ISR: Revalidate every 30 days (30 * 24 * 60 * 60 seconds)
   };
 }
 
